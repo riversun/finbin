@@ -4,7 +4,7 @@
 
 	<groupId>org.riversun</groupId>
 	<artifactId>finbin</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
+	<version>0.6.0</version>
 	<packaging>jar</packaging>
 
 	<name>finbin</name>
