@@ -124,3 +124,6 @@ public class Sample3 {
 - Please note
 
 The result is different depending on the environment of the Java ,Java version and compiler or runtime optimization.
+
+#downloads
+[finbin-0.6.0.jar](http://riversun.org/downloads/finbin-0.6.0.zip)
