@@ -148,7 +148,8 @@ public class BigBinarySearcher extends BinarySearcher {
 						resultIndexList.add(integer);
 					}
 				}
-			} catch (InterruptedException | ExecutionException e) {
+			} catch (InterruptedException e) {
+			} catch (ExecutionException e) {
 			}
 
 		}
@@ -156,7 +157,6 @@ public class BigBinarySearcher extends BinarySearcher {
 		// Sort in ascending order
 		resultIndexList.sort(new Comparator<Integer>() {
 
-			@Override
 			public int compare(Integer num1, Integer num2) {
 				if (num1 > num2) {
 					return 1;
@@ -185,7 +185,6 @@ public class BigBinarySearcher extends BinarySearcher {
 			this.searchBytes = searchBytes;
 		}
 
-		@Override
 		public List<Integer> call() throws Exception {
 			BinarySearcher binSearcher = new BinarySearcher();
 

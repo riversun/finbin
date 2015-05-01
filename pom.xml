@@ -3,10 +3,9 @@
 
 	<modelVersion>4.0.0</modelVersion>
 
-
 	<groupId>org.riversun</groupId>
 	<artifactId>finbin</artifactId>
-	<version>0.6.0</version>
+	<version>0.6.1</version>
 	<packaging>jar</packaging>
 	<name>finbin</name>
 	<description>Hi-speed search for a byte sequence in a big byte array.
@@ -76,8 +75,8 @@
 
 				<configuration>
 
-					<source>1.8</source>
-					<target>1.8</target>
+					<source>1.5</source>
+					<target>1.5</target>
 
 					<excludes>
 						<exclude>examples/**/*</exclude>
@@ -124,7 +123,7 @@
 				</executions>
 				<configuration>
 					<author>false</author>
-					<source>1.8</source>
+					<source>1.5</source>
 					<show>protected</show>
 					<encoding>UTF-8</encoding>
 					<charset>UTF-8</charset>
