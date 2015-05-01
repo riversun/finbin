@@ -1,6 +1,6 @@
 /*  finbin - Hi-speed search byte[] data from big byte[]
  *
- *  Copyright (c) 2015 Tom Misawa<riversun.org@gmail.com>
+ *  Copyright (c) 2015 Tom Misawa(riversun.org@gmail.com)
  *  
  *  Permission is hereby granted, free of charge, to any person obtaining a
  *  copy of this software and associated documentation files (the "Software"),
@@ -40,7 +40,7 @@ import java.util.concurrent.Future;
  * This class is going to scan byte[] data in concurrent by using threads, it is
  * effective(means faster speed) in big size(kiloBytes-megaBytes) byte[] data.<br>
  *
- * Tom Misawa <riversun.org@gmail.com>
+ * Tom Misawa (riversun.org@gmail.com)
  */
 public class BigBinarySearcher extends BinarySearcher {
 
@@ -67,7 +67,6 @@ public class BigBinarySearcher extends BinarySearcher {
 	 * 
 	 * @param srcBytes
 	 * @param searchBytes
-	 * @param numOfThreads
 	 * @return
 	 */
 	public List<Integer> searchBigBytes(byte[] srcBytes, byte[] searchBytes) {

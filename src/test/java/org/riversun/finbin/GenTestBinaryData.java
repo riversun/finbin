@@ -1,6 +1,6 @@
 /*  finbin - Hi-speed search byte[] data from big byte[]
  *
- *  Copyright (c) 2015 Tom Misawa<riversun.org@gmail.com>
+ *  Copyright (c) 2015 Tom Misawa(riversun.org@gmail.com)
  *  
  *  Permission is hereby granted, free of charge, to any person obtaining a
  *  copy of this software and associated documentation files (the "Software"),
@@ -28,7 +28,7 @@ import java.io.File;
 /**
  * 
  * Binary file generator for Test<br>
- * Tom Misawa <riversun.org@gmail.com>
+ * Tom Misawa (riversun.org@gmail.com)
  */
 public class GenTestBinaryData {
 
