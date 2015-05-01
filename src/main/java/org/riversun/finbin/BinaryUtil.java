@@ -35,8 +35,8 @@ import java.nio.file.Paths;
 /**
  * Helper class for finbin test<br>
  * 
- * Tom Misawa (riversun.org@gmail.com)
- *
+ * @author Tom Misawa (riversun.org@gmail.com)
+ * 
  */
 public class BinaryUtil {
 
@@ -68,6 +68,7 @@ public class BinaryUtil {
 
 	/**
 	 * load from file
+	 * 
 	 * @param file
 	 * @return
 	 */

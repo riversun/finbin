@@ -40,7 +40,7 @@ import java.util.concurrent.Future;
  * This class is going to scan byte[] data in concurrent by using threads, it is
  * effective(means faster speed) in big size(kiloBytes-megaBytes) byte[] data.<br>
  *
- * Tom Misawa (riversun.org@gmail.com)
+ * @author Tom Misawa (riversun.org@gmail.com)
  */
 public class BigBinarySearcher extends BinarySearcher {
 

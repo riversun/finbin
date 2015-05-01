@@ -33,7 +33,7 @@ import java.util.List;
  * This class is going to scan byte[] data to sequential, it is effective in
  * small size(less than 1kBytes) byte[] data.<br>
  *
- * Tom Misawa (riversun.org@gmail.com)
+ * @author Tom Misawa (riversun.org@gmail.com)
  *
  */
 public class BinarySearcher {
