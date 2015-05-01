@@ -125,5 +125,17 @@ public class Sample3 {
 
 The result is different depending on the environment of the Java ,Java version and compiler or runtime optimization.
 
-#downloads
-[finbin-0.6.0.jar](http://riversun.org/downloads/finbin-0.6.0.zip)
+#Downloads
+## maven
+- You can add dependencies to maven pom.xml file.
+```xml
+<dependency>
+  <groupId>org.riversun</groupId>
+  <artifactId>finbin</artifactId>
+  <version>0.6.1</version>
+</dependency>
+```
+## direct download
+- You can download jar from here and add it into your classpath.
+
+  [finbin-0.6.1.jar](http://riversun.org/downloads/finbin-0.6.1.zip)
