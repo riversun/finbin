@@ -36,7 +36,7 @@ public class Example {
 
 		byte[] searchBytes = "world".getBytes("utf-8");
 
-		List<Integer> indexList = bbs.searchBytes(iamBigSrcBytes, searchBytes);
+		List<Integer> indexList = bbs.searchBigBytes(iamBigSrcBytes, searchBytes);
 
 		System.out.println("indexList=" + indexList);
 	}
