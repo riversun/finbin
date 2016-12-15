@@ -136,10 +136,7 @@ The result is different depending on the environment of the Java ,Java version a
 <dependency>
   <groupId>org.riversun</groupId>
   <artifactId>finbin</artifactId>
-  <version>0.6.1</version>
+  <version>0.6.2</version>
 </dependency>
 ```
-## direct download
-- You can download jar from here and add it into your classpath.
 
-  [finbin-0.6.1.jar](http://riversun.org/downloads/finbin-0.6.1.zip)
