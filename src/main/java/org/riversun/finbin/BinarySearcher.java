@@ -81,12 +81,16 @@ public class BinarySearcher {
 	 */
 	public int indexOf(byte[] srcBytes, byte[] searchBytes, int startIndex, int endIndex) {
 
-		if (searchBytes.length == 0 || (endIndex - startIndex + 1) < searchBytes.length) {
+		final int searchBytesLeng = searchBytes.length;
+
+		if (searchBytesLeng == 0 || (endIndex - startIndex + 1) < searchBytesLeng) {
 
 			return -1;
 		}
 
-		int maxScanStartPosIdx = srcBytes.length - searchBytes.length;
+		final int srcBytesLeng = srcBytes.length;
+
+		final int maxScanStartPosIdx = srcBytesLeng - searchBytesLeng;
 
 		final int loopEndIdx;
 
@@ -101,7 +105,7 @@ public class BinarySearcher {
 		label: // goto label
 		for (int i = startIndex; i <= loopEndIdx; i++) {
 
-			for (int j = 0; j < searchBytes.length; j++) {
+			for (int j = 0; j < searchBytesLeng; j++) {
 
 				if (srcBytes[i + j] != searchBytes[j]) {
 					continue label;
@@ -111,7 +115,7 @@ public class BinarySearcher {
 
 			}
 
-			if (endIndex < lastScanIdx || lastScanIdx - i + 1 < searchBytes.length) {
+			if (endIndex < lastScanIdx || lastScanIdx - i + 1 < searchBytesLeng) {
 				// it becomes more than the last index
 				// or less than the number of search bytes
 				return -1;
@@ -137,7 +141,7 @@ public class BinarySearcher {
 	}
 
 	public List<Integer> searchBytes(byte[] srcBytes, byte[] searchBytes, int searchStartIndex) {
-		int endIdx = srcBytes.length - 1;
+		final int endIdx = srcBytes.length - 1;
 		return searchBytes(srcBytes, searchBytes, searchStartIndex, endIdx);
 	}
 
@@ -161,7 +165,7 @@ public class BinarySearcher {
 
 		while (cursor < searchEndIndex + 1) {
 
-			int index = indexOf(srcBytes, searchBytes, cursor, searchEndIndex);
+			final int index = indexOf(srcBytes, searchBytes, cursor, searchEndIndex);
 
 			if (index >= 0) {
 
