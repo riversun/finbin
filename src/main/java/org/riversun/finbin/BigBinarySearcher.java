@@ -47,14 +47,29 @@ public class BigBinarySearcher extends BinarySearcher {
 	// max number of thread
 	private static final int DEFAULT_MAX_NUM_OF_THREADS = 128;
 
-	// magic number guided by experiment for my environment.You can change
-	// it. :)
-	private static final int ANALYZE_BYTE_ARRAY_UNIT_SIZE = 512;
+	// thread number no limit
+	public static final int THREADS_NO_LIMIT = 0;
+
+	// magic number guided by experiment
+	private static final int DEFAULT_ANALYZE_BYTE_ARRAY_UNIT_SIZE = 512;
+
+	private int analyzeByteArrayUnitSize = DEFAULT_ANALYZE_BYTE_ARRAY_UNIT_SIZE;
 
 	private int maxNumOfThreads = DEFAULT_MAX_NUM_OF_THREADS;
 
 	/**
-	 * Set max number of thread to concurrent access to byte[] data
+	 * Set buffer size for searching a sequence of bytes Increased the size of
+	 * buffer does not means improving a performance<br>
+	 * 
+	 * @param bufferSize
+	 */
+	public void setBufferSize(int bufferSize) {
+		this.analyzeByteArrayUnitSize = bufferSize;
+	}
+
+	/**
+	 * Set max number of thread to concurrent access to byte[] data <br>
+	 * Increased the number of threads does not means improving a performance<br>
 	 * 
 	 * @param maxNumOfThreads
 	 */
@@ -71,7 +86,7 @@ public class BigBinarySearcher extends BinarySearcher {
 	 */
 	public List<Integer> searchBigBytes(byte[] srcBytes, byte[] searchBytes) {
 
-		int numOfThreadsOptimized = (srcBytes.length / ANALYZE_BYTE_ARRAY_UNIT_SIZE);
+		int numOfThreadsOptimized = (srcBytes.length / analyzeByteArrayUnitSize);
 
 		if (numOfThreadsOptimized == 0) {
 			numOfThreadsOptimized = 1;
@@ -101,7 +116,7 @@ public class BigBinarySearcher extends BinarySearcher {
 
 		final int threadPoolSize;
 
-		if (maxNumOfThreads == 0) {
+		if (maxNumOfThreads == THREADS_NO_LIMIT) {
 			threadPoolSize = numOfThreads;
 		} else {
 			threadPoolSize = maxNumOfThreads;
@@ -170,13 +185,13 @@ public class BigBinarySearcher extends BinarySearcher {
 		return resultIndexList;
 	}
 
-	class BinarySearchTask implements Callable<List<Integer>> {
+	final class BinarySearchTask implements Callable<List<Integer>> {
 
-		byte[] srcBytes;
-		byte[] searchBytes;
+		final byte[] srcBytes;
+		final byte[] searchBytes;
 
-		int offset;
-		int readLeng;
+		final int offset;
+		final int readLeng;
 
 		BinarySearchTask(byte[] srcBytes, byte[] searchBytes, int offset, int readLeng) {
 			this.srcBytes = srcBytes;
@@ -186,9 +201,9 @@ public class BigBinarySearcher extends BinarySearcher {
 		}
 
 		public List<Integer> call() throws Exception {
-			BinarySearcher binSearcher = new BinarySearcher();
+			final BinarySearcher binSearcher = new BinarySearcher();
 
-			List<Integer> resultIndexList = binSearcher.searchBytes(srcBytes, searchBytes, offset, offset + readLeng);
+			final List<Integer> resultIndexList = binSearcher.searchBytes(srcBytes, searchBytes, offset, offset + readLeng);
 			return resultIndexList;
 		}
 	}
