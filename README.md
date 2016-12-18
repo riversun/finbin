@@ -134,6 +134,13 @@ indexList=[6, 25]
 
 The result is different depending on the environment of the Java ,Java version and compiler or runtime optimization.
 
+
+# More Details
+See javadoc as follows.
+
+https://riversun.github.io/javadoc/finbin/
+
+
 #Downloads
 ## maven
 - You can add dependencies to maven pom.xml file.
