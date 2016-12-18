@@ -5,6 +5,11 @@ You can find out quickly from the big size (like mega-bytes binary) of the binar
 
 It is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
+## you want to search byte[] from a BIG file?
+Check this.You can search sequence of bytes from gigabyte-order file with low memory consumption.
+
+https://github.com/riversun/bigdoc
+
 # classes & methods
 ## BigBinarySearcher class
 - public List<Integer> searchBigBytes(byte[] srcBytes, byte[] searchBytes)
