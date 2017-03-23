@@ -5,6 +5,8 @@ You can find out quickly from the big size (like mega-bytes binary) of the binar
 
 It is licensed under [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
 
+[![Maven Central](https://maven-badges.herokuapp.com/maven-central/org.riversun/finbin/badge.svg)](https://maven-badges.herokuapp.com/maven-central/org.riversun/finbin)
+
 ## you want to search byte[] from a BIG file?
 Check this.You can search sequence of bytes from gigabyte-order file with low memory consumption.
 
